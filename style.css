@@ -1,0 +1,207 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.brand-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+.nav-links a:hover {
+  color: #007b5e;
+}
+.enroll-btn {
+  padding: 5px 10px;
+  border: 1px solid #007b5e;
+  border-radius: 4px;
+  color: #007b5e;
+}
+.enroll-btn:hover {
+  background: #007b5e;
+  color: white;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Small screen nav */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
+@media (max-width: 394px) {
+  .balaji-name {
+    font-size: medium;
+  }
+}
+@media (max-width: 338px) {
+  .logo {
+    display: none;
+  }
+}
+
+/* ===== GRID ===== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 20px;
+}
+
+/* ===== BUTTON STYLES ===== */
+button[class^="btn-"] {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.btn-primary { background: #007bff; color: white; }
+.btn-secondary { background: #6c757d; color: white; }
+.btn-outline { background: transparent; border: 2px solid #007bff; color: #007bff; }
+.btn-ghost { background: transparent; color: #333; }
+.btn-pill { background: #28a745; color: white; border-radius: 50px; }
+.btn-icon { background: #ffc107; }
+.btn-gradient { background: linear-gradient(45deg, #ff416c, #ff4b2b); color: white; }
+.btn-disabled { background: #ccc; color: #666; cursor: not-allowed; }
+.btn-animated:hover { transform: scale(1.1); }
+.btn-loading { position: relative; background: #17a2b8; color: white; }
+.btn-loading::after {
+  content: "...";
+  animation: loadingDots 1s infinite;
+}
+@keyframes loadingDots {
+  0%, 20% { content: "."; }
+  40% { content: ".."; }
+  60%, 100% { content: "..."; }
+}
+
+/* ===== CARD STYLES ===== */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+  transition: 0.3s;
+}
+.card img { width: 100%; height: auto; }
+.card-body { padding: 15px; }
+.card-title { font-size: 1.2rem; margin-bottom: 10px; }
+.card-text { font-size: 0.9rem; margin-bottom: 10px; }
+.card:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+/* ===== NAVBAR VARIANTS PAGE ===== */
+.nav-demo {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+/* ===== DECORATIVE TITLE ===== */
+.decorative-title {
+  background-color: pink;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 6px;
+  color: rgb(97, 41, 41);
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+/* ===== DARK MODE ===== */
+.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+.dark-mode .navbar { background: #1e1e1e; border-color: #333; }
+.dark-mode .nav-links a { color: #f0f0f0; }
+
+/* ===== FOOTER STYLES ===== */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer strong {
+  color: #ffb347; /* Slight gold highlight */
+}
+
+footer a {
+  color: #ffb347;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

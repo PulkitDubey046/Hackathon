@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cards - Component Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="navbar-brand">
+      <img src="logo.png" alt="Logo" class="logo">
+      <span class="brand-name balaji-name">PULKIT DUBEY</span>
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="buttons.html">Buttons</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="navbars.html">Navbars</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Title -->
+<section style="text-align:center; padding:20px;">
+  <h1 class="decorative-title">Card Variants</h1>
+  <p>Below are 10 different card designs with copy functionality.</p>
+</section>
+
+<!-- Cards Grid -->
+<div class="grid-3">
+  <!-- CARD 1 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/300x150" alt="Sample">
+    <h3>Image + Title + Text</h3>
+    <p>This is a simple card with image, title, and text.</p>
+    <button class="btn-primary">Learn More</button>
+  </div>
+  <div class="code-block">
+    <pre id="card1-html">
+&lt;div class="card"&gt;
+  &lt;img src="https://via.placeholder.com/300x150" alt="Sample"&gt;
+  &lt;h3&gt;Image + Title + Text&lt;/h3&gt;
+  &lt;p&gt;This is a simple card with image, title, and text.&lt;/p&gt;
+  &lt;button class="btn-primary"&gt;Learn More&lt;/button&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card1-css">
+.card {
+  border:1px solid #ccc;
+  padding:15px;
+  border-radius:8px;
+}
+.card img {
+  width:100%;
+  border-radius:8px 8px 0 0;
+}
+    </pre>
+    <button onclick="copyCode('card1-html')">Copy HTML</button>
+    <button onclick="copyCode('card1-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/300x200" alt="Sample">
+  </div>
+  <div class="code-block">
+    <pre id="card2-html">
+&lt;div class="card"&gt;
+  &lt;img src="https://via.placeholder.com/300x200" alt="Sample"&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card2-css">
+.card img {
+  width:100%;
+  border-radius:8px;
+}
+    </pre>
+    <button onclick="copyCode('card2-html')">Copy HTML</button>
+    <button onclick="copyCode('card2-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="card">
+    <h3>Text Only</h3>
+    <p>A clean text-only card.</p>
+  </div>
+  <div class="code-block">
+    <pre id="card3-html">
+&lt;div class="card"&gt;
+  &lt;h3&gt;Text Only&lt;/h3&gt;
+  &lt;p&gt;A clean text-only card.&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card3-css">
+.card {
+  border:1px solid #ccc;
+  padding:15px;
+}
+    </pre>
+    <button onclick="copyCode('card3-html')">Copy HTML</button>
+    <button onclick="copyCode('card3-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="card horizontal">
+    <img src="https://via.placeholder.com/100x100" alt="Sample">
+    <div>
+      <h3>Horizontal Card</h3>
+      <p>Image on the left, text on the right.</p>
+    </div>
+  </div>
+  <div class="code-block">
+    <pre id="card4-html">
+&lt;div class="card horizontal"&gt;
+  &lt;img src="https://via.placeholder.com/100x100" alt="Sample"&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Horizontal Card&lt;/h3&gt;
+    &lt;p&gt;Image on the left, text on the right.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card4-css">
+.card.horizontal {
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.card.horizontal img {
+  width:100px;
+}
+    </pre>
+    <button onclick="copyCode('card4-html')">Copy HTML</button>
+    <button onclick="copyCode('card4-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 5 -->
+  <div class="card icon-card">
+    <div class="icon">⭐</div>
+    <h3>Icon Card</h3>
+    <p>Card with icon.</p>
+  </div>
+  <div class="code-block">
+    <pre id="card5-html">
+&lt;div class="card icon-card"&gt;
+  &lt;div class="icon"&gt;⭐&lt;/div&gt;
+  &lt;h3&gt;Icon Card&lt;/h3&gt;
+  &lt;p&gt;Card with icon.&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card5-css">
+.icon-card .icon {
+  font-size:2rem;
+}
+    </pre>
+    <button onclick="copyCode('card5-html')">Copy HTML</button>
+    <button onclick="copyCode('card5-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 6 -->
+  <div class="card hover-shadow">
+    <img src="https://via.placeholder.com/300x150" alt="Sample">
+    <p>Hover to see shadow effect.</p>
+  </div>
+  <div class="code-block">
+    <pre id="card6-html">
+&lt;div class="card hover-shadow"&gt;
+  &lt;img src="https://via.placeholder.com/300x150" alt="Sample"&gt;
+  &lt;p&gt;Hover to see shadow effect.&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card6-css">
+.hover-shadow:hover {
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+    </pre>
+    <button onclick="copyCode('card6-html')">Copy HTML</button>
+    <button onclick="copyCode('card6-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 7 -->
+  <div class="card glass">
+    <h3>Glassmorphism</h3>
+    <p>Frosted glass style.</p>
+  </div>
+  <div class="code-block">
+    <pre id="card7-html">
+&lt;div class="card glass"&gt;
+  &lt;h3&gt;Glassmorphism&lt;/h3&gt;
+  &lt;p&gt;Frosted glass style.&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card7-css">
+.glass {
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+}
+    </pre>
+    <button onclick="copyCode('card7-html')">Copy HTML</button>
+    <button onclick="copyCode('card7-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 8 -->
+  <div class="card profile-card">
+    <img src="https://via.placeholder.com/100" alt="Profile">
+    <h3>John Doe</h3>
+    <p>Web Developer</p>
+  </div>
+  <div class="code-block">
+    <pre id="card8-html">
+&lt;div class="card profile-card"&gt;
+  &lt;img src="https://via.placeholder.com/100" alt="Profile"&gt;
+  &lt;h3&gt;John Doe&lt;/h3&gt;
+  &lt;p&gt;Web Developer&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card8-css">
+.profile-card {
+  text-align:center;
+}
+.profile-card img {
+  border-radius:50%;
+}
+    </pre>
+    <button onclick="copyCode('card8-html')">Copy HTML</button>
+    <button onclick="copyCode('card8-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 9 -->
+  <div class="card product-card">
+    <img src="https://via.placeholder.com/300x150" alt="Product">
+    <h3>Product Name</h3>
+    <p>$19.99</p>
+  </div>
+  <div class="code-block">
+    <pre id="card9-html">
+&lt;div class="card product-card"&gt;
+  &lt;img src="https://via.placeholder.com/300x150" alt="Product"&gt;
+  &lt;h3&gt;Product Name&lt;/h3&gt;
+  &lt;p&gt;$19.99&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card9-css">
+.product-card {
+  border:1px solid #eee;
+}
+    </pre>
+    <button onclick="copyCode('card9-html')">Copy HTML</button>
+    <button onclick="copyCode('card9-css')">Copy CSS</button>
+  </div>
+
+  <!-- CARD 10 -->
+  <div class="card blog-card">
+    <h3>Blog Post</h3>
+    <p>Snippet of blog content...</p>
+    <a href="#">Read More</a>
+  </div>
+  <div class="code-block">
+    <pre id="card10-html">
+&lt;div class="card blog-card"&gt;
+  &lt;h3&gt;Blog Post&lt;/h3&gt;
+  &lt;p&gt;Snippet of blog content...&lt;/p&gt;
+  &lt;a href="#"&gt;Read More&lt;/a&gt;
+&lt;/div&gt;
+    </pre>
+    <pre id="card10-css">
+.blog-card a {
+  color:#007b5e;
+}
+    </pre>
+    <button onclick="copyCode('card10-html')">Copy HTML</button>
+    <button onclick="copyCode('card10-css')">Copy CSS</button>
+  </div>
+</div>
+
+</body>
+</html>

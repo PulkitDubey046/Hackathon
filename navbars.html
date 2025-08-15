@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navbars - Component Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- Navbar for this page -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="navbar-brand">
+      <img src="logo.png" alt="Logo" class="logo">
+      <span class="brand-name balaji-name">PULKIT DUBEY</span>
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+      <li><a href="buttons.html">Buttons</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="navbars.html">Navbars</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section style="text-align:center; padding:20px;">
+  <h1 class="decorative-title">Navbar Variants</h1>
+  <p>10 different navbar styles with copy functionality.</p>
+</section>
+
+<div class="grid-3">
+
+  <!-- NAVBAR 1: Fixed Top -->
+  <div>
+    <div class="navbar fixed-top-demo">
+      <a href="#">Logo</a>
+      <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+      </div>
+    </div>
+    <pre id="nav1-html">
+&lt;nav class="navbar fixed-top-demo"&gt;
+  &lt;a href="#"&gt;Logo&lt;/a&gt;
+  &lt;div&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;About&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav1-css">
+.fixed-top-demo {
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#222;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+}
+.fixed-top-demo a {color:#fff; margin:0 5px;}
+    </pre>
+    <button onclick="copyCode('nav1-html')">Copy HTML</button>
+    <button onclick="copyCode('nav1-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 2: Sticky -->
+  <div>
+    <div class="navbar sticky-demo">
+      <a href="#">Logo</a>
+      <div>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+      </div>
+    </div>
+    <pre id="nav2-html">
+&lt;nav class="navbar sticky-demo"&gt;
+  &lt;a href="#"&gt;Logo&lt;/a&gt;
+  &lt;div&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;Services&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav2-css">
+.sticky-demo {
+  position:sticky;
+  top:0;
+  background:#333;
+  color:white;
+  padding:10px;
+}
+.sticky-demo a {color:white; margin:0 5px;}
+    </pre>
+    <button onclick="copyCode('nav2-html')">Copy HTML</button>
+    <button onclick="copyCode('nav2-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 3: Centered Logo -->
+  <div>
+    <div class="navbar center-logo-demo">
+      <div></div>
+      <a href="#" class="center-logo">LOGO</a>
+      <div>
+        <a href="#">Login</a>
+      </div>
+    </div>
+    <pre id="nav3-html">
+&lt;nav class="navbar center-logo-demo"&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;a href="#" class="center-logo"&gt;LOGO&lt;/a&gt;
+  &lt;div&gt;
+    &lt;a href="#"&gt;Login&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav3-css">
+.center-logo-demo {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.center-logo-demo .center-logo {
+  margin:auto;
+}
+    </pre>
+    <button onclick="copyCode('nav3-html')">Copy HTML</button>
+    <button onclick="copyCode('nav3-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 4: Logo Left + Links Right -->
+  <div>
+    <div class="navbar logo-left-demo">
+      <a href="#">Logo</a>
+      <div>
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <pre id="nav4-html">
+&lt;nav class="navbar logo-left-demo"&gt;
+  &lt;a href="#"&gt;Logo&lt;/a&gt;
+  &lt;div&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav4-css">
+.logo-left-demo {
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+}
+    </pre>
+    <button onclick="copyCode('nav4-html')">Copy HTML</button>
+    <button onclick="copyCode('nav4-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 5: Icon-based -->
+  <div>
+    <div class="navbar icon-demo">
+      <span>🏠</span>
+      <span>📧</span>
+      <span>⚙️</span>
+    </div>
+    <pre id="nav5-html">
+&lt;nav class="navbar icon-demo"&gt;
+  &lt;span&gt;🏠&lt;/span&gt;
+  &lt;span&gt;📧&lt;/span&gt;
+  &lt;span&gt;⚙️&lt;/span&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav5-css">
+.icon-demo {
+  display:flex;
+  gap:15px;
+  font-size:1.5rem;
+}
+    </pre>
+    <button onclick="copyCode('nav5-html')">Copy HTML</button>
+    <button onclick="copyCode('nav5-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 6: Search Bar -->
+  <div>
+    <div class="navbar search-demo">
+      <a href="#">Logo</a>
+      <input type="text" placeholder="Search...">
+    </div>
+    <pre id="nav6-html">
+&lt;nav class="navbar search-demo"&gt;
+  &lt;a href="#"&gt;Logo&lt;/a&gt;
+  &lt;input type="text" placeholder="Search..."&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav6-css">
+.search-demo input {
+  padding:5px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+    </pre>
+    <button onclick="copyCode('nav6-html')">Copy HTML</button>
+    <button onclick="copyCode('nav6-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 7: Hamburger Menu -->
+  <div>
+    <div class="navbar hamburger-demo">
+      <a href="#">Logo</a>
+      <button>☰</button>
+    </div>
+    <pre id="nav7-html">
+&lt;nav class="navbar hamburger-demo"&gt;
+  &lt;a href="#"&gt;Logo&lt;/a&gt;
+  &lt;button&gt;☰&lt;/button&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav7-css">
+.hamburger-demo button {
+  font-size:1.5rem;
+  background:none;
+  border:none;
+}
+    </pre>
+    <button onclick="copyCode('nav7-html')">Copy HTML</button>
+    <button onclick="copyCode('nav7-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 8: Transparent -->
+  <div>
+    <div class="navbar transparent-demo">
+      <a href="#">Logo</a>
+      <a href="#">About</a>
+    </div>
+    <pre id="nav8-html">
+&lt;nav class="navbar transparent-demo"&gt;
+  &lt;a href="#"&gt;Logo&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav8-css">
+.transparent-demo {
+  background:transparent;
+  color:white;
+}
+    </pre>
+    <button onclick="copyCode('nav8-html')">Copy HTML</button>
+    <button onclick="copyCode('nav8-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 9: Gradient Background -->
+  <div>
+    <div class="navbar gradient-demo">
+      <a href="#">Logo</a>
+      <a href="#">Gallery</a>
+    </div>
+    <pre id="nav9-html">
+&lt;nav class="navbar gradient-demo"&gt;
+  &lt;a href="#"&gt;Logo&lt;/a&gt;
+  &lt;a href="#"&gt;Gallery&lt;/a&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav9-css">
+.gradient-demo {
+  background:linear-gradient(45deg, #ff6b6b, #f7d794);
+  padding:10px;
+}
+    </pre>
+    <button onclick="copyCode('nav9-html')">Copy HTML</button>
+    <button onclick="copyCode('nav9-css')">Copy CSS</button>
+  </div>
+
+  <!-- NAVBAR 10: Dropdown Menu -->
+  <div>
+    <div class="navbar dropdown-demo">
+      <div class="dropdown">
+        <button>Menu ▼</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+        </div>
+      </div>
+    </div>
+    <pre id="nav10-html">
+&lt;nav class="navbar dropdown-demo"&gt;
+  &lt;div class="dropdown"&gt;
+    &lt;button&gt;Menu ▼&lt;/button&gt;
+    &lt;div class="dropdown-content"&gt;
+      &lt;a href="#"&gt;Link 1&lt;/a&gt;
+      &lt;a href="#"&gt;Link 2&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+    </pre>
+    <pre id="nav10-css">
+.dropdown {
+  position:relative;
+}
+.dropdown-content {
+  display:none;
+  position:absolute;
+  background:white;
+}
+.dropdown:hover .dropdown-content {
+  display:block;
+}
+    </pre>
+    <button onclick="copyCode('nav10-html')">Copy HTML</button>
+    <button onclick="copyCode('nav10-css')">Copy CSS</button>
+  </div>
+
+</div>
+
+</body>
+</html>
